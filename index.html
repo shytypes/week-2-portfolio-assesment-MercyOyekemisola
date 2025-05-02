@@ -1,27 +1,506 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <!-- DO NOT CHANGE CODE WITHIN THE HEAD ELEMENT -->
-  <!-- UNLESS YOU KNOW WHAT YOU"RE DOING-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <!-- add fonts -->
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merienda:wght@300..900&display=swap"
       rel="stylesheet"
     />
-    <!-- local style -->
-    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/global.css"/>
   </head>
   <body>
-    <!-- Header Area -->
-    <header></header>
-    <!-- Main Area -->
-    <main>
-      <h1>My Amazing Portfolio</h1>
-    </main>
+    <!-- This is the header & navigation section -->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="#">Mercy Oyekemisola</a>
+          </div>
+          <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#about">About me</a>
+            <a href="#contact">Contact</a>
+            <a
+              href="https://docs.google.com/document/d/1PiMikdMQXUq4t-9i19kEdq11WMYqfQo2JTI6XNxoAnE/edit?usp=sharing"
+              class="cv-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View my CV</a
+            >
+            <a class="book-call-button" href="#">Book a call</a>
+          </div>
+          <div class="hamburger-btn">☰</div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- This is the hero section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-left">
+          <p>PRODUCT DESIGNER/FRONTEND DEVELOPER</p>
+          <h3>Designing</h3>
+          <p>beyond Aesthetics.</p>
+          <a href="mailto:mercyoyekemisola@gmail.com"
+            >Start a convo, I don't bite 😉 →
+          </a>
+        </div>
+
+        <div class="hero-right">
+          <p>
+            I didn't get into design to push pixels. It started with me asking,
+            "Why is this like this?" and "Couldn't this be easier?" Next thing I
+            knew, I was deep in Figma and VS Code, turning curious questions
+            into real solutions. I design with logic, not just looks. Whether
+            it's wireframes or code, I care about flow, function, and how it
+            actually feels. I'm not here to just "make things pretty." I'm here
+            to solve problems, outsmart the competition, and users come back
+            saying, "That was smooth."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- This is project shots scrolling - Marquee Section -->
+    <div class="marquee-container">
+      <div class="marquee">
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img1.svg" alt="" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img2.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img3.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img4.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img5.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img6.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img7.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img8.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img9.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img10.svg" alt="Project" />
+        </div>
+
+        <!-- I duplicated again for continous loop -->
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img1.svg" alt="" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img2.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img3.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img4.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img5.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img6.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img7.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img8.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img9.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img10.svg" alt="Project" />
+        </div>
+
+        <!-- I duplicated again for continous loop -->
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img1.svg" alt="" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img2.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img3.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img4.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img5.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img6.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img7.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img8.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img9.svg" alt="Project" />
+        </div>
+        <div class="marquee-item">
+          <img src="./assets/images/marquee_img10.svg" alt="Project" />
+        </div>
+  
+      </div>
+    </div>
+
+    <!-- This is my project case study section -->
+    <section class="project-section" id="projects">
+      <div class="container">
+        <h2>
+          Here's the <span class="highlight">HOW</span> behind the
+          <span class="highlight">WOW</span>
+        </h2>
+        <p class="section-subtitle">
+          Design is more than visuals. These aren't just final screens, they're
+          stories. Real problems, smart decisions, and solutions that actually
+          stick.
+        </p>
+
+        <div class="project-grid">
+          <a
+            href="https://www.behance.net/gallery/209327035/Property-Hive-Proptech-case-study"
+            class="project-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="project-image">
+              <img src="./assets/images/project_img1.svg" alt="PropertyHive" />
+            </div>
+            <div class="project-info">
+              <h3>PropertyHive →</h3>
+              <p>
+                A PropTech web app for simplified digital property transactions.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://www.behance.net/gallery/214974931/BudgetEase-App"
+            class="project-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="project-image">
+              <img src="./assets/images/project_img2.svg" alt="BudgetEase" />
+            </div>
+            <div class="project-info">
+              <h3>BudgetEase →</h3>
+              <p>
+                A mobile app that makes finance tracking and goal-setting
+                effortless.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://www.behance.net/gallery/208762503/Sickle-Cell-Advocacy-Network-(SCAN)-Website"
+            class="project-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="project-image">
+              <img src="./assets/images/project_img3.svg" alt="SCAN" />
+            </div>
+            <div class="project-info">
+              <h3>SCAN →</h3>
+              <p>
+                A website for raising awareness, support, and advocacy around
+                sickle cell.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://www.behance.net/gallery/207880139/PeerPay-Payment-App"
+            class="project-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="project-image">
+              <img src="./assets/images/project_img4.svg" alt="Peer2Pay" />
+            </div>
+            <div class="project-info">
+              <h3>Peer2Pay →</h3>
+              <p>
+                A secure peer-to-peer payment system for peer sharing services
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <h2>How I can help you</h2>
+        <p class="section-subtitle">
+          Whether you're launching something new or leveling up what you already
+          have, I'm here to help you connect with your users, bring your ideas
+          to life, and move your product in the right direction.
+        </p>
+        <div class="services-grid">
+          <div class="service-card">
+            <img src="./assets/images/service_icon1.svg" alt="" />
+            <h3>Website Design</h3>
+            <p>
+              Creating beautiful, functional websites that engage and convert
+              visitors
+            </p>
+          </div>
+          <div class="service-card">
+            <img src="./assets/images/service_icon2.svg" alt="" />
+            <h3>Mobile App Design</h3>
+            <p>Intuitive mobile experiences that users love to interact with</p>
+          </div>
+          <div class="service-card">
+            <img src="./assets/images/service_icon3.svg" alt="" />
+            <h3>Web App Design</h3>
+            <p>Complex web applications made simple and enjoyable to use</p>
+          </div>
+          <div class="service-card">
+            <img src="./assets/images/service_icon4.svg" alt="" />
+            <h3>Brand Design</h3>
+            <p>Cohesive brand identities that tell your story</p>
+          </div>
+          <div class="service-card">
+            <img src="./assets/images/service_icon5.svg" alt="" />
+            <h3>Graphic Design</h3>
+            <p>Visually compelling designs that capture attention</p>
+          </div>
+          <div class="service-card">
+            <img src="./assets/images/service_icon6.svg" alt="" />
+            <h3>UI Development</h3>
+            <p>Bringing designs to life with clean, efficient code</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- This is my project shots section -->
+    <section class="project-shots">
+      <div class="container">
+        <h2>Project shots</h2>
+        <p class="section-subtitle">
+          Some designs speak for themselves, this is where I let them do just
+          that.
+        </p>
+        <div class="bento-grid">
+          <div class="grid-item">
+            <img
+              src="./assets/images/project_shot_img1.svg"
+              alt="Project Shot"
+            />
+          </div>
+          <div class="grid-item">
+            <img
+              src="./assets/images/project_shot_img2.svg"
+              alt="Project Shot"
+            />
+          </div>
+          <div class="grid-item">
+            <img
+              src="./assets/images/project_shot_img3.svg"
+              alt="Project Shot"
+            />
+          </div>
+          <div class="grid-item">
+            <img
+              src="./assets/images/project_shot_img4.svg"
+              alt="Project Shot"
+            />
+          </div>
+        </div>
+        <div class="view-more">
+          <a
+            href="https://www.behance.net/mercyoyekemi"
+            class="view-more-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            >View more shots</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- This is the About me Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>
+              <span class="design-text">Design</span> led me here<br />
+              <span class="curiosity-text">Curiosity</span> kept me
+            </h2>
+
+            <p class="intro-text">
+              Hi, I'm Mercy, a Product Designer and a Frontend Developer
+            </p>
+
+            <p>
+              I didn't grow up knowing I'd end up here, crafting interfaces,
+              solving problems, and obsessing over margins. But curiosity's
+              always been my thing. I've always asked why? and what if?
+            </p>
+
+            <p>
+              I care about how things work, sure but even more about how they
+              feel. Whether I'm designing flows or coding them into life, I'm
+              always thinking about the humans on the other side of the
+              screen(the users).
+            </p>
+
+            <p>
+              I studied Human Anatomy. I didn't come from a "design background."
+              Weird switch? Maybe. But honestly, it makes sense. I've always
+              been obsessed with how things work: bodies, products, systems, you
+              name it. Curiosity won the day and I pivoted mid-degree I earned.
+            </p>
+
+            <p>
+              That same curiosity is what led me here; designing digital
+              experiences that don't just look pretty, but actually work for
+              people. I'm not just pushing pixels or making things "pop." I dig
+              into real business problems, user pain points, and competitor gaps
+              to build products that convert, retain, and delight. I've helped
+              boost product satisfaction by 15%, thanks to user research,
+              prototyping, and testing that's rooted in empathy and clarity.
+            </p>
+
+            <p>
+              Beyond product design and frontend development, I also create
+              visual identities and logos that give brands a voice and feeling
+              at first glance. Because great design isn't just seen, it's felt.
+            </p>
+
+            <p>
+              When I'm not designing or coding, you'll probably find me knitting
+              something cozy, deep in conversation with friends or family, or
+              striking up conversations with new people (I love a good chat), or
+              quietly judging broken UX in the wild (👀). Over the years, I've
+              worn many hats from virtual assistant to customer support rep to
+              product manager and each role sharpened my empathy, systems
+              thinking, and ability to truly collaborate.
+            </p>
+
+            <p>
+              I've worked across industries, but my mindset stays the same:
+              design with intention. Whether it's a mobile app, dashboard,
+              website, or web app, I bring structure, thought, and that "let's
+              make this smoother" mindset to every screen.
+            </p>
+
+            <p>
+              I'm still learning (I believe in continuous learning), still
+              building, and still asking way too many "why's."
+            </p>
+
+            <p>But that's kind of the point, isn't it?😉</p>
+          </div>
+          <div class="about-image">
+            <img src="./assets/images/mypic.jpg" alt="Mercy Oyekemisola" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- This is the Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-left">
+            <h2>Hello <span class="wave-emoji">👋</span></h2>
+            <p>Got a project in mind? Let's make it real and make it work </p>
+            <div class="contact-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none" stroke="#999999">
+                <path d="M0,25 H90 M70,5 L90,25 L70,45" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+          <div class="contact-form-container">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write a message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+        
+        <!-- The Form submission results will be displayed here -->
+        <div id="formResults" class="form-results"></div>
+        
+        <div class="name-watermark">mercy oyekemisola</div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="copyright">
+            <p>Copyright © 2025 Mercy Oyekemisola. All rights reserved.</p>
+          </div>
+          <div class="social-links">
+            <a href="mailto:mercyoyekemisola@gmail.com" target="_blank"
+              >Email</a
+            >
+            <a
+              href="https://www.behance.net/mercyoyekemi"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Behance</a
+            >
+            <a
+              href="https://www.linkedin.com/in/mercy-oyekemisola-oyekale/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+            <a
+              href="https://www.instagram.com/mercy_oyekemisola/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+            <a
+              href="https://wa.me/2348106860493"
+              target="_blank"
+              rel="noopener noreferrer"
+              >WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    <script src="script.js"></script>  
   </body>
 </html>

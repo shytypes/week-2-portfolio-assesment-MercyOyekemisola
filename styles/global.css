@@ -1,10 +1,939 @@
-/* remove default browser spacing*/
+/* Base Styles - Let's reset the css */
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*title text style*/
-/* the font-family 'JetBrains Mono', has been linked
- * and is available for your use
- * */
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: #121212;
+  background-color: #ffffff;
+}
+
+/* These are common styling*/
+a {
+  text-decoration: none;
+  color: #666666;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.project-section h2,
+.services h2,
+.project-shots h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #565555;
+}
+
+.project-section h2 .highlight {
+  color: #121212;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  color: #666;
+  font-family: "Merienda", serif;
+  font-size: 18px;
+}
+
+/*This is the Header & Navigation styles */
+header {
+  background-color: #ffffff;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  gap: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  padding: 5px 0;
+  position: relative;
+}
+
+.nav-links a:not(.book-call-button):not(.cv-link)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #121212;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:not(.book-call-button):hover::after {
+  width: 100%;
+}
+
+.book-call-button {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 5px 20px !important;
+  border-radius: 20px;
+}
+
+.book-call-button:hover {
+  background-color: #424242;
+}
+
+/* This is my Hero Section styles*/
+.hero {
+  padding: 120px 0 60px;
+  align-items: center;
+  min-height: 470px;
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-left p:nth-of-type(1) {
+  font-size: 16px;
+}
+
+.hero-left p:nth-of-type(2) {
+  font-size: 50px;
+  /* margin-top: -20px; */
+}
+
+.hero-left h3 {
+  font-size: 74px;
+}
+
+.hero-right p {
+  font-size: 18px;
+  line-height: 35px;
+  font-family: "Merienda", serif;
+  color: #333333;
+}
+
+.hero-left a {
+  color: #333333;
+  font-size: 24px;
+  font-family: "Merienda", serif;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Project shots scrolling - Marquee Section styles */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: scroll 200s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  margin: 0 20px;
+}
+
+.marquee-item img {
+  height: 480px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* This is the Project Section style */
+.project-section {
+  padding: 80px 0;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem 2rem;
+}
+
+.project-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  color: #666;
+  font-size: 20px;
+}
+
+/* This is my Services Section style */
+.services {
+  padding: 5rem 0;
+  background: #f9f9f9;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.service-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.service-card img {
+  height: 28px;
+}
+.service-card h3 {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.service-card p {
+  color: #666;
+}
+
+/* This is the Project Shots style */
+.project-shots {
+  padding: 80px 0;
+}
+
+.bento-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.grid-item {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.05);
+}
+
+.grid-item:nth-child(1) {
+  height: 600px;
+}
+
+.grid-item:nth-child(2) {
+  height: 400px;
+}
+
+.grid-item:nth-child(3) {
+  height: 400px;
+  margin-top: 100px;
+}
+
+.grid-item:nth-child(4) {
+  height: 600px;
+  margin-top: -100px;
+}
+
+.view-more {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.view-more-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 32px;
+  border: 1px solid #666;
+  color: #666;
+  text-decoration: none;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* This is the About me Section style */
+#about.about-section {
+  padding: 5rem 0;
+  background-color: #0d0d0d;
+  position: relative;
+  color: #ffffff;
+}
+
+.about-section .about-content {
+  position: relative;
+}
+
+.about-section .about-text h2 {
+  font-size: 3.5rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: #cdcccc;
+}
+
+.about-section .design-text,
+.about-section .curiosity-text {
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.about-section .intro-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.about-section .about-text p {
+  margin-bottom: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 100%;
+  font-family: "Merienda", serif;
+}
+
+.about-section .about-text p:nth-child(-n + 5) {
+  max-width: calc(100% - 580px);
+}
+
+.about-section .about-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 550px;
+  height: 500px;
+}
+
+.about-section .about-image img {
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* This is the Contact Section style */
+.contact-section {
+  padding: 5rem 0 6rem; 
+  background-color: #0d0d0d;
+  position: relative;
+  color: #ffffff;
+  border-top: 1px solid #666666;
+}
+
+.contact-section .contact-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.contact-left {
+  flex: 1;
+  text-align: left;
+  
+}
+
+.contact-section .contact-content h2 {
+  font-size: 4.5rem; 
+  margin-bottom: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+}
+
+.contact-section .wave-emoji {
+  font-size: 4rem; 
+}
+
+.contact-section .contact-content p {
+  font-size: 1.5rem; 
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-arrow {
+  width: 200px;
+  height: 100px;
+  opacity: 0.3;
+}
+
+.contact-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form-container {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  position: relative;
+  z-index: 3; 
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #121212;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  background-color: #b07d1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #c99029;
+  transform: translateY(-3px);
+}
+
+/* Form Results Display */
+.form-results {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  display: none;
+  position: relative;
+  z-index: 3; 
+}
+
+.form-results h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.form-results p {
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form-results .highlight {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.contact-section .name-watermark {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  font-size: 8rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.05);
+  text-transform: lowercase;
+  z-index: 1;
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* This is the Footer style */
+footer {
+  padding: 2rem 0;
+  background-color: #0d0d0d;
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .copyright p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+footer .social-links {
+  display: flex;
+  gap: 2rem;
+}
+
+footer .social-links a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+footer .social-links a:hover {
+  color: #ffffff;
+}
+
+/* Hamburger Menu */
+.hamburger-btn {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.hamburger-btn:hover {
+  color: #424242;
+}
+
+/* Mobile Navigation */
+.nav-links.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 1rem 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  align-items: flex-start;
+}
+
+.nav-links.show a {
+  padding: 0.75rem 2rem;
+  width: 100%;
+}
+
+/* Finally, let moves to the Media Queries. At this point, I deserve some popcorn and ice cream */
+@media screen and (max-width: 1200px) {
+  .hero-left h3 {
+    font-size: 60px;
+  }
+
+  .hero-left p:nth-of-type(2) {
+    font-size: 40px;
+  }
+
+  
+  .about-section .about-image {
+    width: 500px;
+    height: 450px;
+  }
+
+  .about-section .about-text p:nth-child(-n + 5) {
+    max-width: calc(100% - 530px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  
+  .about-section .about-text h2 {
+    font-size: 3rem;
+  }
+
+  .about-section .about-image {
+    width: 420px;
+    height: 380px;
+  }
+
+  .about-section .about-text p:nth-child(-n + 5) {
+    max-width: calc(100% - 450px);
+  }
+
+  .contact-section .name-watermark {
+    font-size: 6rem;
+  }
+
+  /* Bento Grid */
+  .bento-grid {
+    grid-template-columns: 45% 1fr;
+    gap: 20px;
+  }
+
+  .grid-item:nth-child(1) {
+    height: 500px;
+  }
+
+  .grid-item:nth-child(2) {
+    height: 350px;
+  }
+
+  .grid-item:nth-child(3) {
+    height: 350px;
+    margin-top: 80px;
+  }
+
+  .grid-item:nth-child(4) {
+    height: 500px;
+    margin-top: -80px;
+  }
+
+  /* Hero Section */
+  .hero-left h3 {
+    font-size: 50px;
+  }
+
+  .hero-left p:nth-of-type(2) {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  
+  .about-section .about-image {
+    width: 380px;
+    height: 340px;
+  }
+
+  .about-section .about-text p:nth-child(-n + 5) {
+    max-width: calc(100% - 410px);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  
+  .contact-section .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-left {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .contact-form-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  /* I am hiding the regular nav links and show hamburger for all screens below 800px */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show hamburger button */
+  .hamburger-btn {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Hero Section */
+  .hero .container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero-left {
+    text-align: center;
+  }
+
+  /* Project Grid */
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* About Section */
+  .about-section .about-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-section .about-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-section .about-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    margin: 2rem auto 0; 
+    order: 2;
+  }
+
+  .about-section .about-text {
+    order: 1; 
+  }
+
+  .about-section .about-text p:nth-child(-n + 5) {
+    max-width: 100%;
+  }
+
+  .contact-section .contact-content h2 {
+    font-size: 3.5rem;
+  }
+
+  .contact-section .wave-emoji {
+    font-size: 3.5rem;
+  }
+
+  .contact-section .name-watermark {
+    font-size: 4rem;
+    bottom: -10px;
+  }
+
+  /* Bento Grid */
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .grid-item:nth-child(1),
+  .grid-item:nth-child(2),
+  .grid-item:nth-child(3),
+  .grid-item:nth-child(4) {
+    height: 400px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* Section Headers */
+  .project-section h2,
+  .services h2,
+  .project-shots h2 {
+    font-size: 2rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 100px 0 40px;
+  }
+
+  .hero-left h3 {
+    font-size: 40px;
+  }
+
+  .hero-left p:nth-of-type(2) {
+    font-size: 30px;
+  }
+
+  .hero-left a {
+    font-size: 20px;
+  }
+
+  /* Marquee */
+  .marquee-item img {
+    height: 300px;
+  }
+
+  /* About Section */
+  .about-section .about-text h2 {
+    font-size: 2rem;
+  }
+
+  /* Contact Section */
+  .contact-section .contact-content h2 {
+    font-size: 3rem;
+  }
+
+  .contact-section .wave-emoji {
+    font-size: 3rem;
+  }
+
+  .contact-section .name-watermark {
+    font-size: 3rem;
+  }
+
+  /* Footer */
+  footer .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  footer .social-links {
+    justify-content: center;
+  }
+
+  /* Project Shots */
+  .project-shots {
+    padding: 40px 0;
+  }
+
+  .grid-item:nth-child(1),
+  .grid-item:nth-child(2),
+  .grid-item:nth-child(3),
+  .grid-item:nth-child(4) {
+    height: 300px;
+  }
+
+  .view-more-btn {
+    padding: 10px 24px;
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-left h3 {
+    font-size: 36px;
+  }
+
+  .hero-left p:nth-of-type(2) {
+    font-size: 26px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (max-width: 430px) {
+  footer .social-links {
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    justify-content: center;
+  }
+
+  footer .social-links a {
+    font-size: 0.85rem;
+  }
+
+  footer .copyright p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  footer .social-links {
+    gap: 0.75rem;
+  }
+
+  footer .social-links a {
+    font-size: 0.8rem;
+  }
+
+  footer .copyright p {
+    font-size: 0.75rem;
+  }
+
+  /* Contact Section */
+  .contact-section .contact-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact-section .wave-emoji {
+    font-size: 2.5rem;
+  }
+
+  .contact-section .contact-content p {
+    font-size: 1.1rem;
+  }
+}
